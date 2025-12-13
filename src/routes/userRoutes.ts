@@ -12,6 +12,11 @@ const router = Router();
 /**
  * User Routes
  * Base path: /api/users
+ * 
+ * NOTE: For production use, these routes should include:
+ * - Rate limiting middleware to prevent abuse
+ * - Authentication middleware for protected routes
+ * - Input validation middleware
  */
 
 // GET all users

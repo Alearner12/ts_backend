@@ -115,11 +115,11 @@ This section will be updated as I progress through my learning journey with vari
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 - [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 
-### Learning Platforms
-- TypeScript Deep Dive
-- Prisma's Data Guide
-- PostgreSQL Tutorial
-- AWS Serverless Learning Path
+### Learning Platforms & Courses
+- [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/) - Comprehensive TypeScript guide
+- [Prisma's Data Guide](https://www.prisma.io/dataguide) - Database concepts and best practices
+- [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) - Complete PostgreSQL learning resource
+- [AWS Serverless](https://aws.amazon.com/serverless/) - AWS serverless architecture documentation
 
 ## 🔄 Progress Tracking
 

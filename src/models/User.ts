@@ -1,4 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
+import { EMAIL_REGEX } from '../utils/helpers';
 
 /**
  * User Interface - defines the structure of a User document
@@ -28,7 +29,7 @@ const UserSchema: Schema = new Schema(
       unique: true,
       lowercase: true,
       trim: true,
-      match: [/^\S+@\S+\.\S+$/, 'Please enter a valid email']
+      match: [EMAIL_REGEX, 'Please enter a valid email']
     },
     age: {
       type: Number,

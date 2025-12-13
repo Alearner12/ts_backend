@@ -4,11 +4,15 @@
  */
 
 /**
+ * Email validation regex pattern
+ */
+export const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
+
+/**
  * Validate email format
  */
 export const isValidEmail = (email: string): boolean => {
-  const emailRegex = /^\S+@\S+\.\S+$/;
-  return emailRegex.test(email);
+  return EMAIL_REGEX.test(email);
 };
 
 /**

@@ -85,6 +85,21 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
   try {
     const { name, email, age } = req.body;
     
+    // If email is being updated, check for conflicts
+    if (email) {
+      const existingUser = await User.findOne({ 
+        email, 
+        _id: { $ne: req.params.id } 
+      });
+      if (existingUser) {
+        res.status(400).json({
+          success: false,
+          message: 'Email already in use by another user'
+        });
+        return;
+      }
+    }
+    
     const user = await User.findByIdAndUpdate(
       req.params.id,
       { name, email, age },

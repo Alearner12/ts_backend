@@ -5,8 +5,9 @@
 
 /**
  * Email validation regex pattern
+ * Validates basic email format: username@domain.extension
  */
-export const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
+export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
  * Validate email format

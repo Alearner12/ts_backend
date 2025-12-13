@@ -85,6 +85,12 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
   try {
     const { name, email, age } = req.body;
     
+    // Build update object with only provided fields
+    const updateData: Partial<{ name: string; email: string; age: number }> = {};
+    if (name !== undefined) updateData.name = name;
+    if (email !== undefined) updateData.email = email;
+    if (age !== undefined) updateData.age = age;
+    
     // If email is being updated, check for conflicts
     if (email) {
       const existingUser = await User.findOne({ 
@@ -102,7 +108,7 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
     
     const user = await User.findByIdAndUpdate(
       req.params.id,
-      { name, email, age },
+      updateData,
       { new: true, runValidators: true }
     );
     

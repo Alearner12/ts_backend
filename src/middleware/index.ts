@@ -13,12 +13,13 @@ export const requestLogger = (req: Request, res: Response, next: NextFunction): 
 /**
  * Error Handler Middleware
  * Catches and handles errors in the application
+ * Note: The 'next' parameter is required for Express to recognize this as error middleware
  */
 export const errorHandler = (
   err: Error,
   req: Request,
   res: Response,
-  next: NextFunction
+  _next: NextFunction // Prefixed with _ to indicate intentionally unused
 ): void => {
   console.error('Error:', err.stack);
   

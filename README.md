@@ -1,4 +1,3 @@
-#Backend Learning Journey 🚀
 
 Welcome to my learning repository! This repository contains all the files, projects, and code examples from my journey learning backend development with modern technologies.
 

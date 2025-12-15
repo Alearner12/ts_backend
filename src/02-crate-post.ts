@@ -7,11 +7,9 @@ async function main() {
   await prisma.post.create({
     data: {
      title: "title of post",
-     author: {
-        connect: {
-            id: 1
-        }
-     }
+     content  : "this is the demo post",
+     published : true,
+      authorId : 2
     }
   })
 }
